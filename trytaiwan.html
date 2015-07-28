@@ -17,12 +17,14 @@
 
   <canvas id="canvas" width="500" height="500"></canvas>
   <svg width="800px" height="600px" viewBox="0 0 800 600"></svg>
-  <script>      
+  <script>
      var ctx = document.getElementById("canvas").getContext("2d"); // 取得 Canvas Context
      ctx.beginPath(); // 「我要開始畫囉！」
      ctx.arc(60,60,50,0,6.28);  // 畫一個圓弧，圓心在 (100,100) 且半徑是 10, 繞 360 度
      ctx.stroke(); // 替圓弧的邊著色！
-   
+  </script>
+
+  <script>       
      d3.json(" http://dorisofsky.github.io/taiwan_realtime2/county.json", function(topodata) {
         var features = topojson.feature(topodata, topodata.objects.county).features;
         // 這裡要注意的是 topodata.objects["county"] 中的 "county" 為原本 shp 的檔名
