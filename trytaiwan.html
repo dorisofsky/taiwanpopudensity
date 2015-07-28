@@ -22,7 +22,7 @@
      ctx.beginPath(); // 「我要開始畫囉！」
      ctx.arc(60,60,50,0,6.28);  // 畫一個圓弧，圓心在 (100,100) 且半徑是 10, 繞 360 度
      ctx.stroke(); // 替圓弧的邊著色！
-         
+
      d3.json(" http://dorisofsky.github.io/taiwan_realtime2/county.json", function(topodata) {
         var features = topojson.feature(topodata, topodata.objects.county).features;
         // 這裡要注意的是 topodata.objects["county"] 中的 "county" 為原本 shp 的檔名
@@ -32,12 +32,15 @@
          );
 
         d3.select("svg").selectAll("path").data(features).enter().append("path").attr({
-        d: path,
-        name: function(d){
-          return d.properties[Cname];
-        },
-        fill:'#55AA00'
-     });
+          d: path,
+          name: function(d){
+            return d.properties[Cname];
+          },
+          fill:'#55AA00'
+        });
+
+      });
+     
   </script>
 
 </body>
