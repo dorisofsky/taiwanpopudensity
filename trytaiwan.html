@@ -16,7 +16,7 @@
 <body>
 
   <canvas id="canvas" width="500" height="500"></canvas>
-  <svg width="800px" height="600px" viewBox="0 0 800 600"></svg>
+  
   <script>
      var ctx = document.getElementById("canvas").getContext("2d"); // 取得 Canvas Context
      ctx.beginPath(); // 「我要開始畫囉！」
@@ -24,6 +24,7 @@
      ctx.stroke(); // 替圓弧的邊著色！
   </script>
 
+  <svg width="800px" height="600px" viewBox="0 0 800 600"></svg>
   <script>       
      d3.json(" http://dorisofsky.github.io/taiwan_realtime2/county.json", function(topodata) {
         var features = topojson.feature(topodata, topodata.objects.county).features;
