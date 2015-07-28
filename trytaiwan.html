@@ -32,13 +32,13 @@
         d3.geo.mercator().center([121,24]).scale(6500) // 座標變換函式
          );
 
-        d3.select("svg").selectAll("path").data(features).enter().append("path").attr({
+      /*  d3.select("svg").selectAll("path").data(features).enter().append("path").attr({
           d: path,
           name: function(d){
             return d.properties[Cname];
           },
           fill:'#55AA00'
-        });
+        });*/
 
       });
 
