@@ -36,7 +36,7 @@
         d3.select("svg").selectAll("path").data(features).enter().append("path").attr({
           d: path,
           name: function(d){
-            return d.properties[Cname];
+            return d.properties['C_name'];
           },
           fill:'#55AA00'
         });
