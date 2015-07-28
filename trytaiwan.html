@@ -34,11 +34,11 @@
          );
 
         d3.select("svg").selectAll("path").data(features).enter().append("path").attr({
-          "d": path,
-          "#name": function(d){
-            return d.properties[C_name];
+          d: path,
+          name: function(d){
+            return d.properties[Cname];
           },
-          "fill":'#55AA00'
+          fill:'#55AA00'
         });
 
       });
