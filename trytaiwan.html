@@ -35,11 +35,11 @@
 
         d3.select("svg").selectAll("path").data(features).enter().append("path").attr({
           d: path,
-          name: function(d){
+/*          name: function(d){
               return d.properties['C_name'];
-          },
+          },*/
           fill:'#55AA00',
-          stroke: #000
+          // stroke: #000
         });
 /*
         d3.select("#pathCanvas").append("path")         //縣市/行政區界線
