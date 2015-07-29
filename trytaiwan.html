@@ -36,7 +36,7 @@
         d3.select("svg").selectAll("path").data(features).enter().append("path").attr({
           d: path,
           name: function(d){
-              return d.properties.C_name;
+              return d.properties[C_name];
           },
           fill:'#55AA00',
           stroke: '#000'
@@ -56,7 +56,7 @@
 */
         d3.select("svg").selectAll("path").on("mouseenter", function() {          // title div 顯示滑鼠所指向的縣市/行政區
             fill = $(this).attr("fill");
-            $(this).attr("fill", '#E0FBE7');
+            $(this).attr("fill", '#116493');
             $("#title").html($(this).attr( "name" ));      
             // $('#panel').css({"height": "20px","width": "50px"});
            }).on("mouseout", function() {
