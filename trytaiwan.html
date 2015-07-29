@@ -42,7 +42,7 @@
         });
 
         d3.select("#pathCanvas").append("path")         //縣市/行政區界線
-          .datum(topojson.mesh(topodata, topodata.objects[type], function(a, b) { return a !== b ; }))
+          // .datum(topojson.mesh(topodata, topodata.objects[type], function(a, b) { return a !== b ; }))
           .attr("d", path)
           .attr("class", "subunit-boundary");
 
