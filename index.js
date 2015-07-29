@@ -30,8 +30,8 @@ $(document).ready(function() {
     var prj = function(v) {
       var ret = d3.geo.mercator().center([122,23.25]).scale(6000)(v);
  /*     var ret = fisheye({x:ret[0],y:ret[1]});
-      return [ret.x, ret.y];
-    };*/
+      return [ret.x, ret.y];*/
+    };
     var path = d3.geo.path().projection(prj);
     for(idx=features.length - 1;idx>=0;idx--) features[idx].density = density[features[idx].properties.C_Name];
     d3.select("svg").selectAll("path").data(features).enter().append("path");
