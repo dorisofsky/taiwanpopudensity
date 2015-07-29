@@ -15,14 +15,8 @@
 
 <body>
 
-  <svg width="800px" height="600px" viewBox="0 0 800 600"></svg>
-  <canvas id="canvas" width="150" height="500"></canvas>
-  
+  <svg width="800px" height="600px" viewBox="0 0 800 600"></svg>  
   <script>
-     var ctx = document.getElementById("canvas").getContext("2d"); // 取得 Canvas Context
-     ctx.beginPath(); // 「我要開始畫囉！」
-     ctx.arc(60,60,50,0,6.28);  // 畫一個圓弧，圓心在 (100,100) 且半徑是 10, 繞 360 度
-     ctx.stroke(); // 替圓弧的邊著色！
 
      d3.json(" http://dorisofsky.github.io/taiwan_realtime2/county.json", function(topodata) {
       //改掉json為自己推播的json網址
@@ -39,7 +33,7 @@
               return d.properties.C_name;
           },
           fill:'#55AA00',
-          stroke: '#000'
+          stroke: '#E0FBE7'
         });
 /*
         d3.select("#pathCanvas").append("path")         //縣市/行政區界線
