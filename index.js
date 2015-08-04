@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  var density = {
+ 
+ /* var density = {
     "臺北市": 9952.60,
     "嘉義市": 4512.66,
     "新竹市": 4151.27,
@@ -22,7 +23,7 @@ $(document).ready(function() {
     "南投縣": 125.10,
     "花蓮縣": 71.96,
     "臺東縣": 63.75
-  };
+  }; */
   d3.json("http://dorisofsky.github.io/taiwan_realtime2/county.json", function(topodata) {
     var features = topojson.feature(topodata, topodata.objects.county).features;
     var color = d3.scale.linear().domain([0,10000]).range(["#090","#f00"]);
